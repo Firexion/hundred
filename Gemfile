@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-
-gem 'execjs'
-gem 'therubyracer'
-gem 'rails_12factor', group: :production
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
@@ -41,5 +36,12 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'execjs'
+gem 'therubyracer'
+gem 'rails_12factor', group: :production
+gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
+gem 'twitter-bootswatch-rails-helpers'
+
 
 ruby "2.1.1"
