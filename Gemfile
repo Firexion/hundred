@@ -37,11 +37,17 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'foreman', group: :development
+
 gem 'execjs'
 gem 'therubyracer'
 gem 'rails_12factor', group: :production
 gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
 gem 'twitter-bootswatch-rails-helpers'
+
+gem 'haml-rails'
+gem 'mail_form'
+gem 'simple_form'
 
 
 ruby "2.1.1"
