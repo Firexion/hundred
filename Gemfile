@@ -49,5 +49,7 @@ gem 'haml-rails'
 gem 'mail_form'
 gem 'simple_form'
 
+gem 'active_link_to'
+
 
 ruby "2.1.1"
