@@ -1,9 +1,17 @@
-<h1>Contact</h1>
-  <%= simple_form_for @contact, html: {class: 'form-horizontal' } do |f|  %>
-    <%= f.input :name, required: true %>
-    <%= f.input :email, required: true %>
-    <%= f.input :message, as: :text, required: false, input_html: {rows: 10} %>
+<div class="row-fluid">
+  <div class="col-lg-3 col-sm-2"></div>
+  <div class="col-lg-3 col-sm-4 col-xs-9">
+  	<p>Feel free to contact me about anything. Job offers, questions about coding, suggestions for pages to design, job offers, ways I could improve my website, job offers...</p>
+  </div>
+  <div class="col-lg-3 col-sm-4 col-xs-9">
+    <h1>Contact</h1>
+    <%= simple_form_for @contact, html: {class: 'form-horizontal' } do |f|  %>
+      <%= f.input :name, required: true %>
+      <%= f.input :email, required: true %>
+      <%= f.input :message, as: :text, required: false, input_html: {rows: 10} %>
 
-    <%= f.hidden_field :nickname, hint: 'Leave this field blank!' %>
-    <%= f.button :submit, 'Send message', class: "btn btn-primary" %> 
-  <% end %>
+      <%= f.hidden_field :nickname, hint: 'Leave this field blank!' %>
+      <%= f.button :submit, 'Send message', class: "btn btn-primary" %> 
+    <% end %>
+  </div>
+</div>
