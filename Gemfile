@@ -51,5 +51,6 @@ gem 'simple_form'
 
 gem 'active_link_to'
 
+gem 'angularjs-rails'
 
 ruby "2.1.1"

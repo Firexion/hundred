@@ -1,0 +1,81 @@
+
+
+<!-- System Selector -->
+
+<div class="row-fluid" ng-app="diceAngularApp" ng-controller="DiceController">
+  <div class="col-lg-3 col-md-2 col-sm-2 col-xs-0"></div>
+  <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12">
+    <ul class="nav nav-pills" id="systems">
+      <li class="active"><a href="#">Pathfinder</a></li>
+      <li><a href="#">Legend of the Five Rings</a></li>
+      <li><a href="#">Star Wars</a></li>
+    </ul>
+  </div>
+  <div class="col-lg-4 col-lg-offset-3
+              col-md-4 col-md-offset-2
+              col-sm-4 col-sm-offset-2
+              col-xs-12 ">
+    <!-- Common Rolls -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Common Rolls</h3>
+      </div>
+      <div clas="panel-body">
+
+      </div>
+    </div>
+
+    <!-- Custom Roll -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Custom Roll</h3>
+      </div>
+      <div class="panel-body">
+        <form name="customRollForm" novalidate >
+          <div class="rolls">
+            <input type="text" id="txtFullRollMultiplier" size="1" ng-model="roll.multiplier" ng-pattern="onlyNumbers" >
+            * ( <input type="text" id="txtFullRollNumRolls" size="1" ng-model="roll.numRolls" ng-pattern="onlyNumbers" required>
+            d<input type="text" id="txtFullRollNumSides" size="1" ng-model="roll.numSides" ng-pattern="onlyNumbers" required>
+            + <input type="text" id="txtFullRollPerRollBonus" size="1" ng-model="roll.beforeMultiplyBonus" ng-pattern="onlyNumbers">
+            ) +	<input type="text" id="txtFullRollFinalBonus" size="1" ng-model="roll.afterMultiplyBonus" ng-pattern="onlyNumbers">
+          </div>
+          <div class="rolls" class="btn-group">
+            <button type="submit" class="btn btn-default" ng-click="rollDice($scope)" ng-disabled="!customRollForm.$valid">Roll</button>
+            <button type="submit" class="btn btn-default" ng-click="" ng-disabled="!customRollForm.$valid">Save to Common Rolls</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Quick Roll -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Quick Roll</h3>
+      </div>
+      <div class="panel-body">
+        <div class="btn-group">
+          <div ng-cloak class="quickRolls ng-cloak" ng-repeat="die in dice">
+            <button type="button" class="btn btn-default" ng-click="quickRoll(die, $event)">{{"d" + die}}</button>
+            <span>{{result}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Right Side -->
+  <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
+    <!-- Roll Results -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Roll History</h3>
+      </div>
+      <div class="panel-body" id="rollHistory">
+        <pre ng-cloak class="ng-cloak" id="rollDetails" >{{rollHistory}}</pre>
+      </div>
+      <div class="panel-footer">
+        <button type="button" class="btn btn-default" ng-click="clearHistory()">Clear History</button>
+      </div>
+    </div>
+  </div>
+</div>

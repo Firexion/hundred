@@ -1,0 +1,60 @@
+<!-- System Selector -->
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a href="#">Pathfinder</a></li>
+    <li><a href="#">Legend of the Five Rings</a></li>
+    <li><a href="#">Star Wars</a></li>
+  </ul>
+  <h3 class="text-muted">diceAngular</h3>
+</div>
+
+<div class="col-md-5">     
+  <!-- Common Rolls -->
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Common Rolls</h3>
+    </div>
+    <div clas="panel-body">
+
+    </div>
+    </div>
+
+    <!-- Custom Roll -->
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Custom Roll</h3>
+    </div>
+    <div clas="panel-body">
+
+    </div>
+    </div>
+
+    <!-- Quick Roll -->
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Quick Roll</h3>
+    </div>
+    <div clas="panel-body">
+      <div class="btn-group">
+        <div ng-repeat="die in DiceCtrl.dice">
+          <button type="button" class="btn btn-default">{{die}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Right Side -->
+<div class="col-md-5">
+<!-- Roll Results -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Roll History</h3>
+  </div>
+  <div clas="panel-body">
+    
+  </div>
+  <div class="panel-footer">
+    <button type="button" class="btn btn-default">Clear History</button>
+  </div>
+</div>
+</div>

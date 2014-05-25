@@ -15,7 +15,9 @@
 
 	<p>So, without further to-do, the results:</p>
 	<ul>
-  	  <li>Week 1: <%= link_to("Homepage", :root) %></li>
+    <% @pages.each do |page| %>
+      <li><%= link_to(("Week " + page.week.to_s + ": " + page.name.titleize), page.link) %></li>
+    <% end %>
 	</ul>
   </div>
 </div>
