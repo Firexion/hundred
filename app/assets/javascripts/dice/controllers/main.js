@@ -81,7 +81,8 @@ angular.module('diceAngularApp')
       $scope.rollHistory += rollString;
 
       var $el = $("#rollHistory");
-      $el.scrollTop($el[0].scrollHeight);
+      console.log($el[0].scrollHeight + 50);
+      $el.scrollTop(410);
 
       angular.element($event.target).scope().result = total;
     };
