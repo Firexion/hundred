@@ -3,7 +3,7 @@ function randomInt( intMin, intMax ) {
   intMin = Math.round( intMin );
   return intMin + Math.floor( intMax * (Math.random() % 1));
 }
-    
+
 function getRollDescription( multiplier, numRolls, numSides, beforeMultiplyBonus, afterMultiplyBonus ) {
   var description = "";
 
@@ -39,7 +39,7 @@ function getRollDescription( multiplier, numRolls, numSides, beforeMultiplyBonus
   else if( afterMultiplyBonus < 0 ) {
     description += " - " + Math.abs( afterMultiplyBonus );
   }
-  
+
   return description;
 }
 

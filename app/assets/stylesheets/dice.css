@@ -80,7 +80,7 @@ body {
 
 #rollHistory {
   height: 400px;
-  overflow-y:scroll;
+  overflow-y:auto;
 }
 
 #rollDetails {
@@ -92,13 +92,32 @@ body {
   padding-top: 10px;
 }
 
-.quickRolls {
-  padding-top: 3px;
+.dl-horizontal dt {
+  text-align: left;
+  width: 100px;
+}
+
+.dl-horizontal dd {
+    margin-left: 100px;
+}
+
+.quick-roll-btn {
+  width: 60px;
+}
+
+.results {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.label {
+  display: inline-block;
+  width: 55px;
 }
 
 input.ng-invalid {
   border:1px solid #f00;
-}s
+}
 
 .ng-cloak {
   display:none;
@@ -106,4 +125,8 @@ input.ng-invalid {
 
 #systems {
   padding-bottom: 10px;
+}
+
+.rollResults {
+  padding-left: 25px;
 }

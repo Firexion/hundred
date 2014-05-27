@@ -33,11 +33,11 @@
       <div class="panel-body">
         <form name="customRollForm" novalidate >
           <div class="rolls">
-            <input type="text" id="txtFullRollMultiplier" size="1" ng-model="roll.multiplier" ng-pattern="onlyNumbers" >
-            * ( <input type="text" id="txtFullRollNumRolls" size="1" ng-model="roll.numRolls" ng-pattern="onlyNumbers" required>
-            d<input type="text" id="txtFullRollNumSides" size="1" ng-model="roll.numSides" ng-pattern="onlyNumbers" required>
-            + <input type="text" id="txtFullRollPerRollBonus" size="1" ng-model="roll.beforeMultiplyBonus" ng-pattern="onlyNumbers">
-            ) +	<input type="text" id="txtFullRollFinalBonus" size="1" ng-model="roll.afterMultiplyBonus" ng-pattern="onlyNumbers">
+            <input type="text" id="txtFullRollMultiplier" size="2" ng-model="roll.multiplier" ng-pattern="onlyNumbers" >
+            * ( <input type="text" id="txtFullRollNumRolls" size="2" ng-model="roll.numRolls" ng-pattern="onlyNumbers" required>
+            d<input type="text" id="txtFullRollNumSides" size="2" ng-model="roll.numSides" ng-pattern="onlyNumbers" required>
+            + <input type="text" id="txtFullRollPerRollBonus" size="2" ng-model="roll.beforeMultiplyBonus" ng-pattern="onlyNumbers">
+            ) +	<input type="text" id="txtFullRollFinalBonus" size="2" ng-model="roll.afterMultiplyBonus" ng-pattern="onlyNumbers">
           </div>
           <div class="rolls" class="btn-group">
             <button type="submit" class="btn btn-default" ng-click="rollDice($scope)" ng-disabled="!customRollForm.$valid">Roll</button>
@@ -55,10 +55,14 @@
       </div>
       <div class="panel-body">
         <div class="btn-group">
-          <div ng-cloak class="quickRolls ng-cloak" ng-repeat="die in dice">
-            <button type="button" class="btn btn-default" ng-click="quickRoll(die, $event)">{{"d" + die}}</button>
-            <span>{{result}}</span>
-          </div>
+          <dl class="dl-horizontal">
+            <dt ng-cloak class="ng-cloak quick-rolls" ng-repeat-start="die in dice">
+              <button type="button" class="btn quick-roll-btn btn-primary" ng-click="quickRoll(die, $event)">{{"d" + die}}</button>
+            </dt>
+            <dd ng-cloak class="ng-cloak quick-rolls" ng-repeat-end>
+              <h3 class="results"><label class="label label-info quick-rolls-results">{{result}}</label></h3>
+            </dd>
+          </dl>
         </div>
       </div>
     </div>
