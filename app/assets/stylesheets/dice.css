@@ -83,10 +83,6 @@ body {
   overflow-y:auto;
 }
 
-#rollDetails {
-  font-family:"Goblin One";
-}
-
 .rolls {
   padding-top: 10px;
 }
@@ -131,6 +127,6 @@ input.ng-invalid {
   padding-left: 25px;
 }
 
-.pathfinder{
-  font-family:"Goblin One";
+.pathfinder, #rollDetails {
+  font-family: "Goblin One", "Open Sans", Verdana, Helvetica;
 }
