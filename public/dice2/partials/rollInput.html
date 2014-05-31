@@ -1,0 +1,8 @@
+<div class="rolls">
+  <input type="text" id="fullRollMultiplier" size="2" ng-model="roll.multiplier" ng-pattern="onlyNumbers" >
+    * ( <input type="text" id="fullRollNumRolls" size="2" ng-model="roll.numRolls" ng-pattern="onlyNumbers" required>
+    d<input type="text" id="fullRollNumSides" size="2" ng-model="roll.numSides" ng-pattern="onlyNumbers" required>
+	<plus-minus-toggle value="roll.beforeMultiplyBonus"></plus-minus-toggle>
+	) 
+	<plus-minus-toggle value="roll.afterMultiplyBonus"></plus-minus-toggle>
+</div>

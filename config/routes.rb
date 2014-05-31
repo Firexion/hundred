@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'dice', to: 'dice#main', as: :dice
 
+  get 'dice2', to: 'dice2#main', as: :dice2
+
   resources :users
   resources :contacts, only: [:new, :create]
 

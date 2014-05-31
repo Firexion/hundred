@@ -12,8 +12,16 @@
 //= require angular/angular-route
 //= require angular/angular-sanitize
 //= require angular/angular-scenario
+//= require angular/ui-bootstrap-tpls-0.11.0.min
 
 // dice
-//= require dice/app.js
-//= require dice/controllers/main.js
-//= require dice/dice.js
+//= require dice/app
+//= require dice/controllers/main
+//= require dice/dice
+
+// dicev2
+//= require dice2/app
+//= require dice2/directives
+//= require dice2/controllers/main
+//= require dice2/controllers/modal
+//= require dice2/dice

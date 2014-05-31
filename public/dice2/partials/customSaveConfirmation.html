@@ -1,0 +1,16 @@
+<div ng-controller="ModalCtrl">
+    <script type="text/ng-template" id="saveRollContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Save your custom roll!</h3>
+        </div>
+        <div class="modal-body">
+            Name: <input ng-model="roll.name" />
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+	
+	<button type="submit" class="btn btn-primary" ng-click="save(roll)" ng-disabled="!customRollForm.$valid">Save Roll</button>
+</div>

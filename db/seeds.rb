@@ -8,3 +8,4 @@
 
 Page.create(name: "homepage", week: 1, link: "/", description: "homepage for the website")
 Page.create(name: "simple dice", week: 2, link: "/dice", description: "simple dice rolling program")
+Page.create(name: "simple dice v2", week: 3, link: "/dice2", description: "v2 of simple dice rolling program")

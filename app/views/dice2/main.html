@@ -1,0 +1,102 @@
+<!-- System Selector -->
+<div class="row pathfinder" ng-app="diceAngularApp" ng-controller="DiceController">
+  <div class="col-lg-12
+              col-md-12
+              col-sm-12
+              col-xs-12">
+    <ul class="nav nav-pills" id="systems">
+      <li class="active"><a href="#">Pathfinder</a></li>
+      <li><a href="#">Legend of the Five Rings</a></li>
+      <li><a href="#">Star Wars</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-4
+              col-md-4
+              col-sm-4
+              col-xs-12">
+    <!-- Saved Rolls -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Saved Rolls</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+		  <div class="col-md-2" ng-repeat-start="savedRoll in savedRolls">
+		    <div ng-include="editRoll"></div>
+		  </div>
+		  <div class="col-md-6 ng-cloak quick-rolls" ng-cloak >
+			<button type="button" class="btn saved-roll-btn btn-primary" ng-click="rollSaved(savedRoll, $event)">{{savedRoll.name}}</button>
+		  </div>
+		  <!--<div class="col-md-3">
+			<button type="button" class="btn quick-roll-btn btn-primary" ng-click="rollSaved(savedRoll, $event)">{{savedRoll.display()}}</button>
+		  </div>-->
+		  <div class="col-md-4" ng-repeat-end>
+			<h3 class="results"><label class="label label-info quick-rolls-results">{{result}}</label></h3>
+		  </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Roll -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Custom Roll</h3>
+      </div>
+      <div class="panel-body">
+        <form name="customRollForm" novalidate >
+		  <div ng-include="rollInput"></div>
+		  <div class="row rolls" class="btn-group">
+			<div class="col-md-2">
+			  <button type="submit" class="btn btn-primary" ng-click="rollCustom()" ng-disabled="!customRollForm.$valid">Roll</button>
+			</div>
+			<div class="col-md-6" ng-include="customSaveConfirmation"></div>
+			<div class="col-md-4">
+			  <h3 class="results"><label class="label label-info quick-rolls-results">{{customResult}}</label></h3>
+			</div>
+		  </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Middle Row -->
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <!-- Quick Roll -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Quick Roll</h3>
+      </div>
+      <div class="panel-body">
+        <div class="btn-group">
+          <dl class="dl-horizontal">
+            <dt ng-cloak class="ng-cloak quick-rolls" ng-repeat-start="die in dice">
+              <button type="button" class="btn quick-roll-btn btn-primary" ng-click="quickRoll(die, $event)">{{"d" + die}}</button>
+            </dt>
+            <dd ng-cloak class="ng-cloak quick-rolls" ng-repeat-end>
+              <h3 class="results"><label class="label label-info quick-rolls-results">{{result}}</label></h3>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <!-- Roll Results -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Roll History</h3>
+      </div>
+      <div class="panel-body" id="rollHistory">
+        <pre ng-cloak class="ng-cloak" id="rollDetails" >{{rollHistory}}</pre>
+      </div>
+      <div class="panel-footer ">
+        <button type="button" class="btn btn-default pull-right" ng-click="clearHistory()">Clear History</button>
+		<div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
