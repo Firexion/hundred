@@ -32,7 +32,7 @@
 			<button type="button" class="btn quick-roll-btn btn-primary" ng-click="rollSaved(savedRoll, $event)">{{savedRoll.display()}}</button>
 		  </div>-->
 		  <div class="col-md-4" ng-repeat-end>
-			<h3 class="results"><label class="label label-info quick-rolls-results">{{result}}</label></h3>
+			<h3 class="results"><label class="label label-info quick-rolls-results ng-cloak" ng-cloak>{{result}}</label></h3>
 		  </div>
 
         </div>
@@ -53,7 +53,7 @@
 			</div>
 			<div class="col-md-6" ng-include="customSaveConfirmation"></div>
 			<div class="col-md-4">
-			  <h3 class="results"><label class="label label-info quick-rolls-results">{{customResult}}</label></h3>
+			  <h3 class="results"><label class="label label-info quick-rolls-results ng-cloak" ng-cloak>{{customResult}}</label></h3>
 			</div>
 		  </div>
         </form>
