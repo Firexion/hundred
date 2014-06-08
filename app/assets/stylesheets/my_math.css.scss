@@ -1,0 +1,13 @@
+// Place all the styles related to the MyMath controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.math-row {
+  padding-bottom: 5px;
+}
+
+.math-text {
+  vertical-align: middle;
+  display: flex;
+  word-wrap: break-word;
+}

@@ -25,3 +25,7 @@
 //= require dice2/controllers/main
 //= require dice2/controllers/modal
 //= require dice2/dice
+
+// my_math
+//= require my_math/app
+//= require my_math/my_math

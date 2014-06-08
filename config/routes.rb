@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'my_math', to: 'my_math#index', as: :my_math
+
   root 'welcome#index'
 
   get 'about', to: 'welcome#about', as: :about
