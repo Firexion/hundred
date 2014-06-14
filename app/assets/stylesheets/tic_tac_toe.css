@@ -3,16 +3,12 @@
 	width: 80px;
 }
 
-.tic-tac-toe-mark {
-	font-size: 50px;
-}
-
 .x {
 	color: red;
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .o {
 	color: blue;
-	font-size: 50px;
+	font-size: 40px;
 }
