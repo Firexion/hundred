@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   get 'my_math', to: 'my_math#index', as: :my_math
+  get 'tic_tac_toe', to: 'tic_tac_toe#index', as: :tic_tac_toe
 
   root 'welcome#index'
 

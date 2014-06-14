@@ -29,3 +29,6 @@
 // my_math
 //= require my_math/app
 //= require my_math/my_math
+
+//= require tic_tac_toe/app
+//= require tic_tac_toe/scripts

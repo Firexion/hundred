@@ -1,0 +1,18 @@
+<div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1
+            col-lg-5 col-md-6 col-sm-8 col-xs-12">
+  <div class='jumbotron' id='tic-tac-toe-board' ng-app='ticTacToeApp' ng-controller='TicTacToeController' >
+  	<div ng-repeat='row in game.board.spaces'>
+  		<div id='row-buttons' class='btn-group ng-cloak' ng-cloak>
+    			<button
+    				ng-repeat='space in row'
+    				type="button"
+    				class="btn btn-default tic-tac-toe-space"
+    				ng-click="mark(space)"
+    				ng-disabled="space.selected">
+            <span class='x' ng-class="{'o': space.markedBy.symbol === 'O'}">{{space.markedBy.symbol}}</span>
+          </button>
+    	</div>
+  	</div>
+  </div>
+</div>
+<div ng-include="gameOver"></div>

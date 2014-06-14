@@ -1,0 +1,18 @@
+.tic-tac-toe-space {
+	height: 100px;
+	width: 100px;
+}
+
+.tic-tac-toe-mark {
+	font-size: 50px;
+}
+
+.x {
+	color: red;
+	font-size: 50px;
+}
+
+.o {
+	color: blue;
+	font-size: 50px;
+}

@@ -38,11 +38,7 @@ var ModalCtrl = function ($scope, $modal, $log) {
         $log.info('Modal dismissed at: ' + new Date());
 	  });
   };
-
-
-
 };
-
 
 var SaveRollCtrl = function ($scope, $modalInstance, customRoll) {
   $scope.roll = customRoll;
