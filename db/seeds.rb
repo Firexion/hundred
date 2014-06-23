@@ -11,3 +11,4 @@ Page.create(name: "simple dice", week: 2, link: "/dice", description: "simple di
 Page.create(name: "simple dice v2", week: 3, link: "/dice2", description: "v2 of simple dice rolling program")
 Page.create(name: "my_math", week: 4, link: "/my_math", description: "fibonacci sequence, factorial, and cryptosquare")
 Page.create(name: "tic_tac_toe", week: 5, link: "/tic_tac_toe", description: "tic-tac-toe, the game")
+Page.create(name: "chat rooms", week: 6, link: "/chat", description: "simple node based chat server handling multiple rooms")
