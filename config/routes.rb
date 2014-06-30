@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'microscope', to: redirect('http://firexion.meteor.com/'), as: :microscope
   get 'chat', to: redirect('http://firexion-chat-server.herokuapp.com/'), as: :chat
   get 'my_math', to: 'my_math#index', as: :my_math
   get 'tic_tac_toe', to: 'tic_tac_toe#index', as: :tic_tac_toe
